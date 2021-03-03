@@ -3,14 +3,16 @@ const hex=[0,1,2,3,4,5,6,7,8,9,"A",'B','C','D','E','F']
 
 
 genBtn=document.querySelector('#Color-Button')
-colorTxt=document.querySelector('#Color-Text')
+hexTxt=document.querySelector('#Hex-Color')
+aRgbTxt=document.querySelector('#Rgb-Color')
 
 genBtn.addEventListener('click',()=>{
     //Get Random Number between 0 and 3
     const randomHex=getRandomHex();
-    rgbToHsl(hexToRGB(randomHex))
+    const aRgb=hexToRGB(randomHex)
     document.body.style.backgroundColor=`#${randomHex}`
-    colorTxt.textContent=`#${randomHex}`
+    hexTxt.textContent=`#${randomHex}`
+    aRgbTxt.textContent=`rgb(${aRgb})`
 
 })
 
