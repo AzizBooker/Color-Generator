@@ -8,14 +8,24 @@ aRgbTxt=document.querySelector('#Rgb-Color')
 
 genBtn.addEventListener('click',()=>{
     //Get Random Number between 0 and 3
+   updateText()
+})
+
+document.addEventListener('keyup',(e)=>{
+    if(e.code=="Space"){
+        console.log('Space')
+        updateText()
+    }
+})
+
+function updateText(){
     const randomHex=getRandomHex();
     const aRgb=hexToRGB(randomHex)
     document.body.style.backgroundColor=`#${randomHex}`
     hexTxt.textContent=`#${randomHex}`
-    aRgbTxt.textContent=`rgb(${aRgb})`
+    aRgbTxt.textContent=`rgb(${aRgb})`;
 
-})
-
+}
 function getRandomHex(){
     const randomHex=['']
     for(let i=0;i <6;i++){
@@ -35,7 +45,7 @@ var aRgb=[
     parseInt(aRgbHex[2],16)
     
 ]
-console.log(aRgb)
+//console.log(aRgb)
 return aRgb
 }
 

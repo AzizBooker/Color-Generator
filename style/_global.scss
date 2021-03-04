@@ -1,3 +1,33 @@
 body{
     background-color: #333;
 }
+
+.container{
+    margin: 0 auto;
+    text-align: center;
+    button{
+        border-radius: 1rem;
+        border-color: black;
+        border-width: 2px;
+        background-color:transparent;
+        padding: .3rem;
+        outline: none;
+        transition:all 100ms ease-in-out;
+        &:hover{
+            color: white;
+            border-color: white;
+
+        }
+    }
+}
+
+.text__wrapper{
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    width: 60%;
+    padding: .3rem .5rem;
+    font-size: 3rem;
+}
